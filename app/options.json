@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Daddy",
+		"image": "daddy.png",
+		"value": "daddy"
+	},
+	{
+		"name": "Mommy",
+		"image": "mommy.png",
+		"value": "mommy"
+	},
+	{
+		"name": "Ethan",
+		"image": "ethan.png",
+		"value": "Ethan"
+	}
+]

@@ -1,0 +1,6 @@
+app/images/*.jpg
+app/images/*.png
+app/*-ej.json
+!app/images/person.jpg
+node_modules
+platforms
