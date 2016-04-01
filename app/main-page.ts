@@ -12,7 +12,8 @@ import * as scrollView from 'ui/scroll-view';
 	selector: 'main',
 	template: `
 		<StackLayout>
-			<Label align="center" text="EJs App!"></Label>
+			<ActionBar title="Ethans App!">
+			</ActionBar>
 			<ScrollView>
 			<WrapLayout orientation="horizontal" width="100%">
 				<kid-button [kid-option]="item" *ngFor="#item of items"></kid-button>
@@ -21,13 +22,22 @@ import * as scrollView from 'ui/scroll-view';
 		</StackLayout>
 	`,
 	styles: [`
+		ActionBar{
+			background-color:#1E88E5;
+		}
 		Label{
-			font-size: 45;
+			font-size: 35;
 			horizontal-align: center;
+			text-align:center;
+			background-color:blue;
 			color:white;
+			border-bottom-width:5;
+			border-color:#101010;
+			width:100%;
+			padding:5px 0;
 		}
 		StackLayout{
-			background-color:blue;
+			background-color:#212121;
 		}
 	`],
 	directives: [KidButton],
@@ -44,9 +54,9 @@ export class MainPage implements OnInit {
 	ngOnInit(): void {
 		//get rid of the action bar.
 		let page = frame.topmost().currentPage;
-		page.actionBarHidden = true;
-		// orientationModule.setCurrentOrientation("landscape", function() {
-		// 	console.log("landscape orientation set");
-		// });
+		page.actionBarHidden = false;
+		orientationModule.setCurrentOrientation("landscape", function() {
+			console.log("landscape orientation set");
+		});
 	}
 }
